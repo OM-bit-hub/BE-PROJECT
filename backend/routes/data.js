@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Data = require('../models/Data');
 
-router.get('fetchdata',async(req,res)=>{
+router.get('/fetchdata',fetchUser,async(req,res)=>{
     try{
         const datas = await Data.find();
         res.json(datas);
@@ -13,3 +13,6 @@ router.get('fetchdata',async(req,res)=>{
         res.status(500).send("Internal server error");
     }
 });
+
+
+module.exports = Data;
