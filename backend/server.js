@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const connectDB = require("./connectDB")
+
+app.use(express.json());
+app.use(cors());
+app.use('/api/data',require('./routes/data'))
+
 connectDB();
-const Data= require('./routes/data')
-app.use('/api/data',Data)
 
 app.listen(5000,()=>{
     console.log("Server is listening at: localhost:5000/")

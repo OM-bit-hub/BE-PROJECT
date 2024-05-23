@@ -1,7 +1,24 @@
-
+import { useEffect,useState } from "react";
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState({});
+  const fetchData = async () => {
+    const response = await fetch("http://localhost:5000/api/data/fetch",{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+    setData(data[0]);
+  };
+  useEffect(() => {
+    fetchData();
+  }
+  , []);
+  
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,7 +70,7 @@ function App() {
       </nav>
 
       <div className="user container my-3">
-        <p>UserName : </p>
+        <p>UserName : Om Dhengle </p>
       </div>
       <div className="highlights container border">
         <div className="box1 ">Production Today</div>
@@ -67,22 +84,22 @@ function App() {
           Total Hours :
         </p>
         <p className="info mx-3" id="CAP">
-          Capacity :
+          Capacity : {data.Capacity}
         </p>
         <p className="info mx-3" id="RCO">
-          Reduce CO<sub>2</sub> :
+          Reduce CO<sub>2</sub> :{data.CO2}
         </p>
         <p className="info mx-3" id="WTH">
-          Weather :
+          Weather :{data.Weather}
         </p>
         <p className="info mx-3" id="HUM">
-          Humidity :
+          Humidity : {data.Humidity}
         </p>
         <p className="info mx-3" id="RAM">
-          Rainmeter :
+          Rainmeter : {data.Rainmeter}
         </p>
         <p className="info mx-3" id="TEMP">
-          Temperature :
+          Temperature : {data.Temp}
         </p>
       </div>
 
