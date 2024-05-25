@@ -46,11 +46,6 @@ function App() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Charts
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
                   Logs
                 </a>
               </li>
@@ -71,35 +66,36 @@ function App() {
 
       <div className="user container my-3">
         <p>UserName : Om Dhengle </p>
+        <hr/>
       </div>
-      <div className="highlights container border">
-        <div className="box1 ">Production Today</div>
-        <div className="box2 ">Total Production</div>
-        <div className="box3 ">Income Today</div>
-        <div className="box4 ">Total Income</div>
-      </div>
+      <div className="highlights container">
+        <div className="box1 ">Production Today<p className="inner">0 kWh</p></div>
+        <div className="box2 ">Total Production<p className="inner">0 kWh</p></div>
+        <div className="box3 ">Income Today <p className="inner">0 INR</p></div>
+        <div className="box4 ">Total Income <p className="inner">0 INR</p></div>
+      </div><p></p>
       <div className="overview container">
         <h3>Overview</h3>
         <p className="info mx-3" id="TH">
-          Total Hours :
+          <p>Total Hours : 0</p>
         </p>
         <p className="info mx-3" id="CAP">
-          Capacity : {data.Capacity}
+          Capacity : 18 v
         </p>
         <p className="info mx-3" id="RCO">
-          Reduce CO<sub>2</sub> :{data.CO2}
+          Reduce CO<sub>2</sub> : {data.CO2} t
         </p>
         <p className="info mx-3" id="WTH">
-          Weather :{data.Weather}
+          Weather : {data.Weather}
         </p>
         <p className="info mx-3" id="HUM">
-          Humidity : {data.Humidity}
+          Humidity : {data.Humidity} %
         </p>
         <p className="info mx-3" id="RAM">
-          Rainmeter : {data.Rainmeter}
+          Rainmeter : {data.Rainmeter} mm
         </p>
         <p className="info mx-3" id="TEMP">
-          Temperature : {data.Temp}
+          Temperature : {data.Temp} <sup>o</sup>C
         </p>
       </div>
 

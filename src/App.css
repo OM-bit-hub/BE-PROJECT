@@ -19,30 +19,50 @@ body{
 }
 .box1{
   border: 1px solid;
+  font-size: large;
+  padding : 10px;
+
   width: 200px;
   height: 250px;
   text-align: center;
 }
 .box2{
   border: 1px solid;
+  font-size: large;
+  padding : 10px;
+
   width: 200px;
   height: 250px;
   text-align: center;
 }
 .box3{
   border: 1px solid;
+  font-size: large;
+  padding : 10px;
+
   width: 200px;
   height: 250px;
   text-align: center;
 }
 .box4{
   border: 1px solid;
+  font-size: large;
+  padding : 10px;
+
   width: 200px;
   height: 250px;
   text-align: center;
 }
 
-
+.inner{
+  border: 1px solid;
+  height: 40px;
+  width: 100px;
+  padding: 5px;
+  position: relative;
+  top: 40px;
+  left: 24%;
+}
 
 .footer{
   background:#000;
