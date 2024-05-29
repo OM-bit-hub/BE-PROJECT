@@ -4,12 +4,14 @@
 }
 
 body{
-  /* background-image: url(''); */
+  background-image: url('C:\\Users\\acEr\\OneDrive\\Desktop\\BE Project\\UI\\assets\\gif.gif');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background: linear-gradient( rgb(0.5, 0.5, 0.5));;
+  background-size: fit;
+  
+  background: linear-gradient();;
 }
+
 
 .highlights{
   padding: 10px;
@@ -21,38 +23,13 @@ body{
   border: 1px solid;
   font-size: large;
   padding : 10px;
-
+  
   width: 200px;
   height: 250px;
   text-align: center;
 }
-.box2{
-  border: 1px solid;
-  font-size: large;
-  padding : 10px;
 
-  width: 200px;
-  height: 250px;
-  text-align: center;
-}
-.box3{
-  border: 1px solid;
-  font-size: large;
-  padding : 10px;
 
-  width: 200px;
-  height: 250px;
-  text-align: center;
-}
-.box4{
-  border: 1px solid;
-  font-size: large;
-  padding : 10px;
-
-  width: 200px;
-  height: 250px;
-  text-align: center;
-}
 
 .inner{
   border: 1px solid;
@@ -60,8 +37,16 @@ body{
   width: 100px;
   padding: 5px;
   position: relative;
+  background-color: whitesmoke;
   top: 40px;
   left: 24%;
+}
+.overview{
+  background-color: white;
+  width: 390px;
+  border-radius: 50px;
+  position: relative;
+  right: 450px;
 }
 
 .footer{
